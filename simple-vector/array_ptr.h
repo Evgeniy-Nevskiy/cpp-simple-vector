@@ -29,8 +29,9 @@ public:
 
     ArrayPtr(ArrayPtr &&other)
     {
+        // simple_vector_ = std::exchange(other.simple_vector_, nullptr);
         std::swap(simple_vector_, other.simple_vector_);
-        other.simple_vector_ = nullptr;
+        // other.simple_vector_ = nullptr;
     }
 
     ArrayPtr &operator=(ArrayPtr &&other)
